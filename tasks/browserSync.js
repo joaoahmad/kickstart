@@ -10,7 +10,7 @@ module.exports = function(grunt){
                 ]
             },
             options: {
-                proxy: "localhost:8888/braseiro-americas"
+                proxy: "localhost:3000"
             }
         }
 

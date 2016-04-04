@@ -2,7 +2,7 @@ module.exports = function(grunt){
     grunt.config('concurrent', {
 
         watches: {
-            tasks: ['watch:styles','browserSync:dev'],
+            tasks: ['watch:styles'],
             options: {
                 logConcurrentOutput: true
             }
