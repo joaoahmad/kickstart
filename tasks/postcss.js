@@ -6,12 +6,10 @@ module.exports = function(grunt){
                 map: true,
                 processors: [
                     require('pixrem')(),
-                    require('autoprefixer-core')({browsers: '> 1%, last 2 versions, Firefox ESR, Opera 12.1'}), 
+                    require('autoprefixer-core')({browsers: '> 1%, last 2 versions, Firefox ESR, Opera 12.1'}),
                 ]
             },
-            dist: {
-                src: 'css/main.css'
-            }
+            src: 'css/main.css'
         },
         dist: {
             options: {
@@ -22,9 +20,7 @@ module.exports = function(grunt){
                     require('cssnano')() // minify the result
                 ]
             },
-            dist: {
-                src: 'css/main.css'
-            }
+            src: 'css/main.css'
         }
 
     });

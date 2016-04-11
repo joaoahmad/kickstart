@@ -9,6 +9,9 @@
     font-size: 1.8rem
 
 ._text-small
+    font-size: 1.2rem
+
+._text-extrasmall
     font-size: 1rem
 
 // text weight ----------
@@ -22,10 +25,24 @@
 ._text-strong
     font-weight: 600
 
+// text transform's -------
+
+._lowercase
+    text-transform: lowercase
+
+._uppercase
+    text-transform: uppercase
+
 // colors ----------
 
 ._color-primary
     color: $primary
+
+._color-red
+    color: $red
+
+._color-yellow
+    color: $yellow
 
 // text align ----------
 
@@ -46,11 +63,17 @@
 ._margin-bottom-small
     margin-bottom: 1rem
 
+._margin-bottom-remove
+    margin-bottom: 0
+
 ._margin-top
     margin-top: 2rem
 
 ._margin-top-small
     margin-top: 1rem
+
+._margin-top-remove
+    margin-bottom: 0
 
 // float ----------
 
@@ -89,24 +112,20 @@
     display: block !important
 
     &-mobile
-        @extend %hide
-        @media screen and (max-width: $mobile-max)
-            display: block !important
+        @media screen and (min-width: $phablet)
+            display: none !important
 
     &-phablet
-        @extend %hide
-        @media screen and (max-width: $phablet-max)
-            display: block !important
+        @media screen and (min-width: $tablet)
+            display: none !important
 
     &-tablet
-        @extend %hide
-        @media screen and (max-width: $tablet-max)
-            display: block !important
+        @media screen and (min-width: $desktop)
+            display: none !important
 
     &-desktop
-        @extend %hide
-        @media screen and (max-width: $desktop-max)
-            display: block !important
+        @media screen and (min-width: $large-desktop)
+            display: none !important
 
 
 // flex helpers
@@ -121,3 +140,5 @@
 ._flex-bottom
     @extend %flex
     align-self: flex-end
+
+// others
