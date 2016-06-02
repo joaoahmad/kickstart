@@ -6,7 +6,7 @@ module.exports = function(grunt){
                 map: true,
                 processors: [
                     require('pixrem')(),
-                    require('autoprefixer-core')({browsers: '> 1%, last 2 versions, Firefox ESR, Opera 12.1'}),
+                    require('autoprefixer')({browsers: '> 1%, last 2 versions, Firefox ESR, Opera 12.1'}),
                 ]
             },
             src: 'css/main.css'
@@ -16,7 +16,7 @@ module.exports = function(grunt){
                 map: true,
                 processors: [
                     require('pixrem')(),
-                    require('autoprefixer-core')({browsers: '> 1%, last 2 versions, Firefox ESR, Opera 12.1'}),
+                    require('autoprefixer')({browsers: '> 1%, last 2 versions, Firefox ESR, Opera 12.1'}),
                     require('cssnano')() // minify the result
                 ]
             },

@@ -1,7 +1,7 @@
 {
     "name": "designLab-kickstart",
     "version": "1.1.0",
-    "description": "Project boilerplate powered by Grunt, SASS, Jeet, PostCSS, Uglify ...",
+    "description": "Project boilerplate powered by Grunt, SASS, Jeet, PostCSS, Uglify, Dandelion ...",
     "main": "Gruntfile.js",
     "dependencies": {
         "load-grunt-config": "^0.19.2"

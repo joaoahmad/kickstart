@@ -1,0 +1,9 @@
+adapter: sftp
+host: designlab.com.br
+username: dlab34
+password: q#9ebdc.
+path: staging.designlab.com.br/joekr
+
+exclude:
+    - .gitignore
+    - dandelion.yml
