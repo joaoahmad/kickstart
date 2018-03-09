@@ -1,0 +1,74 @@
+//#
+// $jeet-gutter: 1
+
+[class*=col-],
+[class*=span-]
+    width: 100%
+
+@for $i from 1 through 12
+    .col-#{$i}
+        +col($i/12)
+
+    .span-#{$i}
+        +span($i/12)
+
+@for $i from 1 through 12
+    @media screen and (min-width: $mobile)
+        .col-sm-#{$i}
+            +col($i/12)
+
+        .col-sm-pull-#{$i}
+            +shift(-$i/12)
+
+        .col-sm-push-#{$i}
+            +shift($i/12)
+
+        .span-sm-#{$i}
+            +span($i/12)
+
+@for $i from 1 through 12
+    @media screen and (min-width: $tablet)
+        .col-md-#{$i}
+            +col($i/12)
+
+        .col-md-pull-#{$i}
+            +shift(-$i/12)
+
+        .col-md-push-#{$i}
+            +shift($i/12)
+
+        .span-md-#{$i}
+            +span($i/12)
+
+@for $i from 1 through 12
+    @media screen and (min-width: $desktop)
+        .col-lg-#{$i}
+            +col($i/12)
+
+        .col-lg-pull-#{$i}
+            +shift(-$i/12)
+
+        .col-lg-push-#{$i}
+            +shift($i/12)
+
+        .span-lg-#{$i}
+            +span($i/12)
+
+
+.container
+    +center(1290px, $gutter)
+
+    &-small
+        max-width: 960px
+
+    &-small
+        max-width: 1000px
+
+.row
+    +cf()
+
+.wrapper
+    position: relative
+    display: block
+    margin: 0 auto
+    padding: 0 1%

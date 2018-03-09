@@ -1,0 +1,14 @@
+.menu {
+  display: flex;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+
+  &-item{
+    margin-left: 10px;
+
+    &:fist-child{
+      margin-left: 0;
+    }
+  }
+}

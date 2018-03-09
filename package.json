@@ -1,15 +1,13 @@
 {
-    "name": "designLab-kickstart",
-    "version": "1.1.0",
+    "name": "kickstart",
+    "version": "2.0.0",
     "description": "Project boilerplate powered by Grunt, SASS, Jeet, PostCSS, Uglify ...",
-    "main": "Gruntfile.js",
+    "main": "gruntfile.js",
     "dependencies": {
         "load-grunt-config": "^0.19.2"
     },
     "devDependencies": {
         "autoprefixer": "^6.2.3",
-        "autoprefixer-core": "~6.0.1",
-        "cssnano": "^3.4.0",
         "grunt": "~1.0.1",
         "grunt-browser-sync": "^2.2.0",
         "grunt-concurrent": "^2.1.0",
@@ -22,17 +20,15 @@
         "grunt-contrib-watch": "~1.0.0",
         "grunt-postcss": "^0.8.0",
         "grunt-shell": "^1.2.1",
-        "load-grunt-tasks": "^3.2.0",
         "pixrem": "^3.0.0"
     },
     "scripts": {
-        "start": "nodemon server.js",
-        "test": "echo \"Error: no test specified\" && exit 1"
+        "start": "grunt"
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/dlab-hub/kickstart.git"
+        "url": "https://github.com/joaoahmad/kickstart.git"
     },
-    "author": "",
+    "author": "Joao Ahmad",
     "license": "BSD-2-Clause"
 }

@@ -1,0 +1,144 @@
+//#
+
+// text size ----------
+
+.u-text-medium
+    font-size: 1.6rem
+
+.u-text-large
+    font-size: 1.8rem
+
+.u-text-small
+    font-size: 1.2rem
+
+.u-text-extrasmall
+    font-size: 1rem
+
+// text weight ----------
+
+.u-text-light
+    font-weight: 200
+
+.u-text-medium
+    font-weight: 400
+
+.u-text-strong
+    font-weight: 600
+
+// text transform's -------
+
+.u-lowercase
+    text-transform: lowercase
+
+.u-uppercase
+    text-transform: uppercase
+
+// colors ----------
+
+.u-color-primary
+    color: $primary
+
+.u-color-red
+    color: $red
+
+.u-color-yellow
+    color: $yellow
+
+// text align ----------
+
+.u-text-center
+    text-align: center
+
+.u-text-left
+    text-align: left
+
+.u-text-right
+    text-align: right
+
+// margin ----------
+
+.u-margin-bottom
+    margin-bottom: 2rem
+
+.u-margin-bottom-small
+    margin-bottom: 1rem
+
+.u-margin-bottom-remove
+    margin-bottom: 0
+
+.u-margin-top
+    margin-top: 2rem
+
+.u-margin-top-small
+    margin-top: 1rem
+
+.u-margin-top-remove
+    margin-top: 0
+
+// float ----------
+
+.u-pull-left
+    float: left
+
+.u-pull-right
+    float: right
+
+// hide's & show's ----------
+
+.u-hide
+    display: none !important
+    @media screen and (max-width: $mobile-max)
+        &-mobile
+            display: none !important
+
+    @media screen and (max-width: $phablet-max)
+        &-phablet
+            display: none !important
+
+    @media screen and (max-width: $tablet-max)
+        &-tablet
+            display: none !important
+
+    @media screen and (max-width: $desktop-max)
+        &-desktop
+            display: none !important
+
+// show's ...
+
+%hide
+    display: none
+
+.u-show
+    display: block !important
+
+    &-mobile
+        @media screen and (min-width: $phablet)
+            display: none !important
+
+    &-phablet
+        @media screen and (min-width: $tablet)
+            display: none !important
+
+    &-tablet
+        @media screen and (min-width: $desktop)
+            display: none !important
+
+    &-desktop
+        @media screen and (min-width: $large-desktop)
+            display: none !important
+
+
+// flex helpers
+
+.u-flex
+    @extend %flex
+
+.u-flex-center
+    @extend %flex
+    align-items: center
+
+.u-flex-bottom
+    @extend %flex
+    align-self: flex-end
+
+// others
