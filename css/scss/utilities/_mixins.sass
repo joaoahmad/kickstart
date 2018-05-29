@@ -70,4 +70,21 @@ $breakpoints-max-variables: 1000em $desktop-max $tablet-max $phablet-max $mobile
 @mixin col($width, $gutter: $gutter)
     width: percentage($width)
     padding-left: $gutter/2
+
     padding-right: $gutter/2
+
+
+// --------------------------------------
+// MISCELLANEOUS
+// --------------------------------------
+
+@mixin link-reset
+    text-decoration: none
+
+    &:visited
+        text-decoration: none
+
+@mixin list-reset
+    list-style: none
+    padding: 0
+    margin: 0

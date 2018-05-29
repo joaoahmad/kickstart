@@ -60,19 +60,25 @@
 .u-margin-bottom
     margin-bottom: 2rem
 
-.u-margin-bottom-small
+.u-margin-small-bottom
     margin-bottom: 1rem
 
-.u-margin-bottom-remove
+.u-margin-large-bottom
+    margin-bottom: 4rem
+
+.u-margin-remove-bottom
     margin-bottom: 0
 
 .u-margin-top
     margin-top: 2rem
 
-.u-margin-top-small
+.u-margin-small-top
     margin-top: 1rem
 
-.u-margin-top-remove
+.u-margin-large-top
+    margin-top: 4rem
+
+.u-margin-remove-top
     margin-top: 0
 
 // float ----------
@@ -133,12 +139,32 @@
 .u-flex
     @extend %flex
 
-.u-flex-center
+.u-flex-wrap
+    flex-wrap: wrap
+
+.u-flex-column
+    flex-direction: column
+
+.u-align-center
     @extend %flex
     align-items: center
 
-.u-flex-bottom
+.u-align-start
     @extend %flex
     align-self: flex-end
 
-// others
+.u-align-end
+    @extend %flex
+    align-self: flex-end
+
+.u-justify-center
+    @extend %flex
+    justify-content: center
+
+.u-justify-start
+    @extend %flex
+    justify-content: flex-end
+
+.u-justify-end
+    @extend %flex
+    justify-content: flex-end
