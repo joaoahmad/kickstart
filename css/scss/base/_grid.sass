@@ -56,16 +56,36 @@
 
 
 .container
-    +center(1290px, $gutter)
+    +center(1200px, 16px)
 
     &-small
         max-width: 960px
 
-    &-small
+    &-medium
         max-width: 1000px
+
+    &-large
+        max-width: 1440px
+
+    +below(phablet)
+        padding-left: 20px
+        padding-right: 20px
 
 .row
     +cf()
+    display: flex
+    flex-wrap: wrap
+    margin-left: -$gutter/2
+    margin-right: -$gutter/2
+
+    &-strech
+        display: flex
+        flex-wrap: wrap
+        align-items: stretch
+
+        > *
+            display: flex
+            align-items: stretch
 
 .wrapper
     position: relative
