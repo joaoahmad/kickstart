@@ -58,28 +58,28 @@
 // margin ----------
 
 .u-margin-bottom
-    margin-bottom: 2rem
+    margin-bottom: 2rem !important
 
 .u-margin-small-bottom
-    margin-bottom: 1rem
+    margin-bottom: 1rem !important
 
 .u-margin-large-bottom
-    margin-bottom: 4rem
+    margin-bottom: 4rem !important
 
 .u-margin-remove-bottom
-    margin-bottom: 0
+    margin-bottom: 0 !important
 
 .u-margin-top
-    margin-top: 2rem
+    margin-top: 2rem !important
 
 .u-margin-small-top
-    margin-top: 1rem
+    margin-top: 1rem !important
 
 .u-margin-large-top
-    margin-top: 4rem
+    margin-top: 4rem !important
 
 .u-margin-remove-top
-    margin-top: 0
+    margin-top: 0 !important
 
 // float ----------
 
@@ -93,6 +93,10 @@
 
 .u-hide
     display: none !important
+    @media screen and (max-width: $breakmenu)
+        &-breakmenu
+            display: none !important
+
     @media screen and (max-width: $mobile-max)
         &-mobile
             display: none !important
@@ -117,6 +121,10 @@
 .u-show
     display: block !important
 
+    &-breakmenu
+        @media screen and (min-width: $breakmenu)
+            display: none !important
+
     &-mobile
         @media screen and (min-width: $phablet)
             display: none !important
@@ -137,7 +145,8 @@
 // flex helpers
 
 .u-flex
-    @extend %flex
+    display: flex !important
+    flex-wrap: wrap
 
 .u-flex-wrap
     flex-wrap: wrap
