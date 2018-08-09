@@ -5,6 +5,9 @@
 [class*=span-]
     width: 100%
 
+    &:last-child
+        margin-right: 0
+
 @for $i from 1 through 12
     .col-#{$i}
         +col($i/12)
@@ -86,9 +89,3 @@
         > *
             display: flex
             align-items: stretch
-
-.wrapper
-    position: relative
-    display: block
-    margin: 0 auto
-    padding: 0 1%

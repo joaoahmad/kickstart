@@ -4,6 +4,11 @@
     display: inline-block
     vertical-align: top
 
+@mixin list-none
+    list-style: none
+    margin: 0
+    padding: 0
+
 // --------------------------------------
 // Responsive
 // --------------------------------------
@@ -25,6 +30,18 @@ $breakpoints-max-variables: 1000em $desktop-max $tablet-max $phablet-max $mobile
                 @content
 
 // --------------------------------------
+// AT BELOW =v
+// --------------------------------------
+
+@mixin at-below($point)
+    @each $breakpoint in $breakpoints
+        $i: index($breakpoints, $breakpoint)
+
+        @if $point == $breakpoint
+            @media screen and (max-width: nth($breakpoints-variables, $i))
+                @content
+
+// --------------------------------------
 // ABOVE ^
 // --------------------------------------
 
@@ -34,6 +51,18 @@ $breakpoints-max-variables: 1000em $desktop-max $tablet-max $phablet-max $mobile
 
         @if $point == $breakpoint
             @media screen and (min-width: nth($breakpoints-max-variables, $i)+1)
+                @content
+
+// --------------------------------------
+// AT ABOVE =^
+// --------------------------------------
+
+@mixin at-above($point)
+    @each $breakpoint in $breakpoints
+        $i: index($breakpoints, $breakpoint)
+
+        @if $point == $breakpoint
+            @media screen and (min-width: nth($breakpoints-max-variables, $i))
                 @content
 
 // --------------------------------------
@@ -63,6 +92,7 @@ $breakpoints-max-variables: 1000em $desktop-max $tablet-max $phablet-max $mobile
             @media screen and (min-width: nth($breakpoints-variables, $i)) and (max-width: nth($breakpoints-max-variables, $i))
                 @content
 
+
 // --------------------------------------
 // NEW COLUMN SYSTEM
 // --------------------------------------
@@ -70,7 +100,6 @@ $breakpoints-max-variables: 1000em $desktop-max $tablet-max $phablet-max $mobile
 @mixin col($width, $gutter: $gutter)
     width: percentage($width)
     padding-left: $gutter/2
-
     padding-right: $gutter/2
 
 
@@ -88,3 +117,17 @@ $breakpoints-max-variables: 1000em $desktop-max $tablet-max $phablet-max $mobile
     list-style: none
     padding: 0
     margin: 0
+
+@mixin icon-font
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: 'icomoon' !important
+    speak: none
+    font-style: normal
+    font-weight: normal
+    font-variant: normal
+    text-transform: none
+    line-height: 1
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased
+    -moz-osx-font-smoothing: grayscale

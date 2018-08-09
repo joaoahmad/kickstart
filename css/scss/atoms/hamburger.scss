@@ -1,0 +1,60 @@
+.hamburger {
+  position: relative;
+  display: block;
+  width: 24px;
+  height: 17px;
+  padding: 15px 12px;
+  // background: $color-white;
+  box-sizing: content-box;
+  cursor: pointer;
+  z-index: 1001;
+
+  @include above(breakmenu) {
+    display: none;
+  }
+
+  span {
+    position: relative;
+    display: inline-block;
+    top: 0;
+    height: 2px;
+    width: 100%;
+    background: $color-white;
+    transition: 0.33s $cubic;
+
+    body.is-mobile-menu-open & {
+      background: transparent;
+    }
+
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      display: block;
+      left: 0;
+      height: 2px;
+      width: 100%;
+      background: $color-white;
+      transition: 0.33s $cubic;
+      will-transform: rotateZ;
+    }
+
+    &::before {
+      top: -8px;
+
+      body.is-mobile-menu-open & {
+        top: 0;
+        transform: rotateZ(45deg);
+      }
+    }
+
+    &::after {
+      top: 8px;
+
+      body.is-mobile-menu-open & {
+        top: 0;
+        transform: rotateZ(-45deg);
+      }
+    }
+  }
+}
